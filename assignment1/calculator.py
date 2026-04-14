@@ -1,0 +1,6 @@
+print("enter ist number: ")
+num1=input()
+print("enter iind number: ")
+num2=input()
+sum=int(num1)+int(num2)
+print("sum is",sum)
