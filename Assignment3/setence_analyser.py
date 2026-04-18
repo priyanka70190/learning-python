@@ -21,8 +21,17 @@ print("Chracters count with out spaces: ",len(nospace_sentense))
 #sentence reverse word by word
 
 reverse_sentence=sentence1[::-1]
-print("Reverse sentence: "," ".join(reverse_sentence))
+r_s=" ".join(reverse_sentence)
+print("Reverse sentence: ",r_s)
 
 #palindrome
-r_s=nospace_sentense[::-1]
-print("String is palindrome: ",nospace_sentense==r_s)
+"""r_s=nospace_sentense[::-1]
+print(r_s)
+print("String is palindrome: ",nospace_sentense==r_s)"""
+#print (r_s)
+#print(cleaned_sentense)
+if(r_s==cleaned_sentense):
+    print("Palindrome")
+else:
+     print("Not Palindrome")
+
