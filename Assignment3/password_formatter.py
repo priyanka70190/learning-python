@@ -20,8 +20,8 @@ print("Second half of the Password: ",nospace_password[p_len//2:p_len])
 #Masked Password
 first_2_char=nospace_password[0:2]
 #print("First two char:",first_2_char)
-last_2_char=nospace_password[9:11]
+last_2_char=nospace_password[p_len-2:p_len]
 #print("Last 2 char:",last_2_char)
-remaining_characters=len(nospace_password[2:9])
+remaining_characters=len(nospace_password[2:p_len-2])
 masked_password="".join([first_2_char,remaining_characters * "*",last_2_char])
 print("Masked Password: ",masked_password)
