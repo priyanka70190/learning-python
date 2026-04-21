@@ -44,6 +44,9 @@ elif(transaction_type=="Withdraw" and account_type=="Savings" ):
         if(amount>0 and amount<=account_balance):
             new_balance=account_balance-amount
             if(new_balance<500):
+               # new_balance=new_balance+amount
+                #print("Account Balance: ",new_balance)
+                print("Account Balance: ",account_balance)
                 print("transaction rejected")
             else:
                 print("Transaction Approved!")
@@ -57,6 +60,8 @@ elif(transaction_type=="Withdraw" and account_type=="Current"):
             print("Amount Withdraw :", amount)
             print("New Balance: ",new_balance)
         else:
+
+            print("Account Balance: ",account_balance)
             print("transaction rejected")
 else:
     print("Invalid account type or transaction type is entered")
