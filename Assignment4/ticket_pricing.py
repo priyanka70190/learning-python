@@ -22,7 +22,9 @@ print("Enter the Day of the week:")
 day=input()
 weekday_list=["monday","tuesday","wednesday","thursday","friday"]
 weekend_list=["saturday","sunday"]
-if(age>=60 and (day in weekday_list)):
+if((day not in weekday_list and day not in weekend_list)):
+    print("Invalid Day entered")
+elif(age>=60 and (day in weekday_list)):
     print("Age Group: Senior")
     print("Day: Weekday")
     print("your ticket price is : 7$")
@@ -30,8 +32,8 @@ elif(age>=60 and (day in weekend_list)):
     print("Age Group: Senior")
     print("Day: Weekend")
     print("your ticket price is : 10$")
-elif(age>=60 and (day not in weekday_list and day not in weekend_list)):
-    print("Invalid Day entered")
+#elif(age>=60 and (day not in weekday_list and day not in weekend_list)):
+ #   print("Invalid Day entered")
 elif(age>=13 and(day in weekday_list)):
     print("Age Group: Adult")
     print("Day: Weekday")
@@ -40,8 +42,8 @@ elif(age>=13 and(day in weekend_list)):
     print("Age Group: Adult")
     print("Day: Weekend")
     print("your ticket price is : 15$")
-elif(age>=13 and(day not in weekday_list and day not in weekend_list)):
-    print("Invalid Day entered")
+#elif(age>=13 and(day not in weekday_list and day not in weekend_list)):
+ #   print("Invalid Day entered")
 elif(age<=12 and(day in weekday_list)):
     print("Age Group: child")
     print("Day: Weekday")
@@ -50,6 +52,6 @@ elif (age <= 12 and (day in weekend_list)):
     print("Age Group: child")
     print("Day: Weekend")
     print("your ticket price is : 8$")
-elif (age <= 12 and (day not in weekend_list and day not in weekday_list)):
-   print("Invalid Day entered")
+#elif (age <= 12 and (day not in weekend_list and day not in weekday_list)):
+ #  print("Invalid Day entered")
 
