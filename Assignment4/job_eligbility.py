@@ -26,7 +26,7 @@ certification=input()
 qual_list=["Masters","Bachelors","High School"]
 if(age>=25 and qualification=="Masters" and experience>=3 and certification=="Yes"):
     print("Congratulations! You are eligible for: Senior Engineer")
-elif(age>=21 and qualification=="Bachelors" and experience>=1 and certification=="Yes"):
+elif(age>=21 and (qualification=="Bachelors" or qualification=="Masters") and experience>=1 and certification=="Yes"):
     print("Congratulations! You are eligible for: Junior Engineer")
 elif(age>=18 and (qualification in qual_list)  and experience>=0 and (certification=="No" or certification=="Yes")):
     print("Congratulations! You are eligible for: Trainee Role")
