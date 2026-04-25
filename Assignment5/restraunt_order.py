@@ -36,13 +36,13 @@ print(40*"-")
 print("Restraunt Bill")
 print(40*"-")
 for key in dict1:
-   if(key in dict2):
-       print(dict2[key],end=" ")
-       if(key in dict3):
-           print(dict3[key],end=" ")
-           print("*",dict1[key]," = ",dict3[key]*dict1[key])
-           sum+=dict3[key]*dict1[key]
-       continue
+   #if(key in dict2):
+    print(dict2[key],end=" ")
+       #if(key in dict3):
+    print(dict3[key],end=" ")
+    print("*",dict1[key]," = ",dict3[key]*dict1[key])
+    sum+=dict3[key]*dict1[key]
+    continue
 
 
 print(40*"-")
