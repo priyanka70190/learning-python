@@ -34,10 +34,29 @@ def show_candidates():
 
 def caste_vote(voter_name,candidate_name):
     global t_v
-    voted_voters.append(voter_name)
-    t_v+=1
-    candidates[candidate_name]+=1
-    print(voter_name,"vote for ",candidate_name,"has been recorded!")
+    if(voter_name==" "):
+        print("Error..!Voter name cannot be empty")
+        return
+
+    for voters in voted_voters:
+        if voters==voter_name:
+            print("Error..!Voter has already voted")
+            return
+        i=0
+    for candidate in candidates:
+
+        if(candidate_name==candidate):
+            voted_voters.append(voter_name)
+            t_v+=1
+            candidates[candidate_name]+=1
+            print(voter_name,"vote for ",candidate_name,"has been recorded!")
+            break
+        else:
+            i+=1
+            if(i==len(candidates)):
+                print("Error!",candidate_name,"is not a valid  candidate")
+            else:
+                continue
 
 def show_results():
     print("----Current Results---- ")
@@ -46,10 +65,22 @@ def show_results():
     print("Total Votes Cast: ",t_v)
     max=0
     for candidate in candidates:
-        if(candidates[candidate]>max):
+        if(candidates[candidate]>=max):
             max=candidates[candidate]
+    for candidate in candidates:
+        if(candidates[candidate]==max):
             leading=candidate
-    print("Currently Leading: ",leading)
+            print("Currently Leading: ",leading)
+
+def declare_winner():
+    max=1
+    for candidate in candidates:
+        if(candidates[candidate]>=max):
+            max=candidates[candidate]
+    for candidate in candidates:
+        if(candidates[candidate]==max):
+            leading=candidate
+            print("Winner: ",leading)
 
 print("--- Voting Menu---")
 print("1. Show Candidates")
