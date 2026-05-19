@@ -2,7 +2,7 @@
    that searches for a target value in a sorted list
    retutn its index or -1 if not found.
    Ask the user to enter a list of sorted numbers and a target to search for"""
-from unittest import result
+
 
 
 def binary_search(arr,target,low,high):
