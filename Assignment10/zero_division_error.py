@@ -1,4 +1,4 @@
-from sys import exception
+
 
 try:
     x=10/0
